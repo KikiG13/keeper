@@ -8,15 +8,13 @@ import notes from '../notes.js'
 function App () {
   return <div>
   <Heading />
-  <div>
-  {notes.map(note => (
+  {notes.map(noteItem => (
     <Note 
-      key={note.key}
-      title={note.title}
-      content={note.content}
+      key={noteItem.key}
+      title={noteItem.title}
+      content={noteItem.content}
     />
   ))}
-  </div>
   <Footing />
   </div>
 }
